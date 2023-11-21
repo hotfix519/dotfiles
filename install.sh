@@ -18,10 +18,3 @@ cat /home/gitpod/.dotfiles/.bashrc | tee -a ~/.bashrc >/dev/null
 cd $GITPOD_REPO_ROOT
 
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
-
-FILE=./install_extensions.sh
-if [ -f "$FILE" ]; then
-    bash "$FILE"
-else 
-    echo "$FILE does not exist"
-fi
