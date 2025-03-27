@@ -12,13 +12,7 @@ chmod u+x starship.sh
 ./starship.sh -y
 
 # use our thing
-cat /home/gitpod/.dotfiles/.bashrc | tee -a ~/.bashrc >/dev/null
-
-# goto home
-cd $GITPOD_REPO_ROOT
+cat ~/.dotfiles/.bashrc | tee -a ~/.bashrc >/dev/null
 
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
-if [[ -x "$(command -v cursor)" && -f "./install_extensions.sh" ]]; then
-  ./install_extensions.sh
-fi
